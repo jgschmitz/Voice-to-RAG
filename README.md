@@ -6,7 +6,7 @@
 ```
 
 # --- Imports ---
-``` <code>
+``` 
 import pymongo
 from voyageai import Client as VoyageClient
 import openai
