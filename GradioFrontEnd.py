@@ -1,3 +1,4 @@
+# super basic
 import gradio as gr
 from rag_core import generate_rag_response
 from voice_utils import transcribe_audio
