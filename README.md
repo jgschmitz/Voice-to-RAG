@@ -1,4 +1,4 @@
-#### 🧠 Voice-to-RAG (Multimodal Healthcare Assistant)
+#### 🧠 Voice-to-RAG (Multimodal Healthcare Assistant) MongoDB + DeepSeek R1 🐳
 
 ``` python
 !pip install pymongo voyageai openai git+https://github.com/openai/whisper.git > /dev/null
