@@ -140,7 +140,7 @@ def voice_to_rag_pipeline(audio_file_path, keyword=None, category=None):
 ```
 
 ####--- Step 5: Run with Sample Audio File ---
-#### Upload an audio file named 'voice_question.mp3' to your Colab environment
+#### Upload an audio file named 'voice_question.mp3' to your environment 
 ``` python
 from google.colab import files
 Upload an audio file named 'voice_question.mp3' to your Colab environment
