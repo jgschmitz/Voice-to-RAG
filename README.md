@@ -1,5 +1,3 @@
-# Voice to RAG (Multimodal Healthcare Assistant)
-
 # 🧠 Voice-to-RAG (Multimodal Healthcare Assistant)
 
 # --- Install Dependencies (for Colab) ---
