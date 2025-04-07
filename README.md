@@ -1,12 +1,12 @@
 #### 🧠 Voice-to-RAG (Multimodal Healthcare Assistant)
 
-```
+``` python
 !pip install pymongo voyageai openai git+https://github.com/openai/whisper.git > /dev/null
 !apt-get install ffmpeg > /dev/null
 ```
 
 #### --- Imports ---
-``` 
+``` python
 import pymongo
 from voyageai import Client as VoyageClient
 import openai
@@ -17,29 +17,29 @@ import logging
 ```
 
 #### --- Setup Logging ---
-```
+``` python
 logging.basicConfig(level=logging.INFO)
 ```
 
 #### --- MongoDB Setup ---
-```
+``` python
 mongo_client = pymongo.MongoClient("your_mongo_uri")  # Replace with your URI
 db = mongo_client.voyagenew
 collection = db.demo_rag
 history_collection = db.voice_query_history
 ```
 #### --- API Keys ---
-```
+``` python
 voyage_client = VoyageClient(api_key="your_voyage_api_key")
 openai.api_key = "your_openai_api_key"
 ```
 
 #### --- Whisper Setup ---
-```
+``` python
 whisper_model = whisper.load_model("base")  # can also try 'tiny' for faster inference
 ```
 #### --- Step 1: Transcribe Audio ---
-```
+``` python
 def transcribe_audio(file_path):
     result = whisper_model.transcribe(file_path)
     return result["text"]
@@ -74,7 +74,7 @@ def search_similar_docs(query_embedding, keyword=None, category=None, top_k=3):
 ```
 
 #### --- Step 3: RAG Response Generation ---
-```
+``` python
 def generate_rag_response(user_query, keyword=None, category=None):
     try:
         query_response = voyage_client.embed([user_query], model="voyage-lite-02-instruct")
@@ -114,7 +114,7 @@ def generate_rag_response(user_query, keyword=None, category=None):
 ```
 
 #### --- Step 4: Voice-to-RAG Pipeline ---
-```
+``` python
 def voice_to_rag_pipeline(audio_file_path, keyword=None, category=None):
     session_id = str(uuid.uuid4())
     timestamp = datetime.datetime.utcnow()
@@ -141,7 +141,7 @@ def voice_to_rag_pipeline(audio_file_path, keyword=None, category=None):
 
 ####--- Step 5: Run with Sample Audio File ---
 #### Upload an audio file named 'voice_question.mp3' to your Colab environment
-```
+``` python
 from google.colab import files
 Upload an audio file named 'voice_question.mp3' to your Colab environment
 
