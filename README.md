@@ -1,8 +1,17 @@
 #### 🧠 Voice-to-RAG (Multimodal Healthcare Assistant) 
 
 ``` python
-!pip install pymongo voyageai openai git+https://github.com/openai/whisper.git > /dev/null
-!apt-get install ffmpeg > /dev/null
+# Force install of CPU-only Torch first
+```
+!pip install -q torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+```
+# Then install Whisper
+```
+!pip install -q git+https://github.com/openai/whisper.git
+```
+# Make sure ffmpeg is available
+```
+!apt-get update -y && apt-get install -y ffmpeg
 ```
 
 #### --- Imports ---
