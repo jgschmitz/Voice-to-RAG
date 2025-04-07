@@ -1,6 +1,5 @@
 # 🧠 Voice-to-RAG (Multimodal Healthcare Assistant)
 
-# --- Install Dependencies (for Colab) ---
 ```
 !pip install pymongo voyageai openai git+https://github.com/openai/whisper.git > /dev/null
 !apt-get install ffmpeg > /dev/null
