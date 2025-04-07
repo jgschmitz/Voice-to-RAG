@@ -3,11 +3,11 @@
 ``` python
 !pip install -q torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 ```
-#### Then install Whisper
+#### ---Then install Whisper---
 ``` python
 !pip install -q git+https://github.com/openai/whisper.git
 ```
-#### Make sure ffmpeg is available
+#### ---Make sure ffmpeg is available---
 ``` python
 !apt-get update -y && apt-get install -y ffmpeg
 ```
