@@ -1,5 +1,15 @@
 #### 🧠 Voice-to-RAG (Multimodal Healthcare Assistant) 
 
+### How it works
+🎤 How It Works
+User speaks a question
+Audio is transcribed using Whisper
+The transcribed query is embedded via Voyage AI
+Embedding is used to run a hybrid search in MongoDB Atlas
+Top results are passed to OpenAI GPT-4 to generate the response
+
+Final answer is returned — and can be spoken back via TTS (optional)
+
 ``` python
 !pip install -q torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 ```
