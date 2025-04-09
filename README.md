@@ -1,7 +1,6 @@
 #### 🧠 Voice-to-RAG (Multimodal Healthcare Assistant) 
 
 ### How it works
-How It Works <br>
 User speaks a question <br>
 Audio is transcribed using Whisper <br>
 The transcribed query is embedded via Voyage AI <br>
